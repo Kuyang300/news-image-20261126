@@ -1,4 +1,4 @@
-// news-image-20261126: decodes entry.b64.txt and writes /output/entry.png.
+// news-image-20261126 v2: decodes entry.b64.txt and writes /output/entry.png.
 // Node 22 standard library only; all paths resolve from this file's location.
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
@@ -16,3 +16,4 @@ if (bytes.length > 1024 * 1024) {
 }
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, "entry.png"), bytes);
+// v2 image: 50 stories, verified Thursday 26 November 2026.
